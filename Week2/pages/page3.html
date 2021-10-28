@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page 3</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Exercises for week 2">
+        <meta name="keywords" content="HTML, CSS, Week 2, CEN311">
+        <meta name="author" content="Igli Draci">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>This is Page 3</h1>
+        <a href="../index.html">
+            <button>Go back</button>
+        </a>
+        <div style="text-align: center;">
+            <h2>Registration form</h2>
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" required maxlength="20"><br><br>
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" required><br><br>
+                
+                <label>Gender</label><br>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" id="non-binary" name="gender" value="non-binary">
+                <label for="non-binary">Non-binary</label><br><br>
+
+                <label>Education</label><br>
+                <input type="checkbox" id="high-school" name="high-school" value="high-school">
+                <label for="high-school"> High school</label><br>
+                <input type="checkbox" id="bachelor" name="bachelor" value="bachelor">
+                <label for="bachelor"> Bachelor</label><br>
+                <input type="checkbox" id="master" name="master" value="master">
+                <label for="master"> Master</label><br>
+                <input type="checkbox" id="phd" name="phd" value="phd">
+                <label for="phd"> PHD</label><br><br>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br><br>
+
+                <label for="role">Role:</label><br>
+                <input type="text" id="role" name="role" value="Student" readonly><br><br>
+                
+                <label for="pwd">Password:</label><br>
+                <input type="password" id="pwd" name="pwd"><br><br>
+                
+                <label for="birthday">Birth date</label><br>
+                <input type="date" id="birthday" name="birthday" min="2001-01-02"><br><br>
+
+                <label for="stydtYears">Study years:</label>
+                <input type="number" id="stydtYears" name="stydtYears" min="1" max="5"><br><br>
+                
+                <label for="phone">Phone number:</label><br>
+                <input type="tel" id="phone" name="phone"
+                        placeholder="069-00-00-000"
+                        pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{3}"><br><br>
+                
+                <label for="languages">Choose your go to language:</label>
+                <!-- multiple -->
+                <select id="languages" name="languages">
+                    <option value="c">C</option>
+                    <option value="c++">C++</option>
+                    <option value="java">Java</option>
+                    <option value="python" selected>Python</option>
+                    <option value="js">Javascript</option>
+                </select><br><br>
+
+                <label>Describe yourself</label><br>
+                <textarea name="describe" rows="5" cols="30">
+                </textarea><br><br>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
