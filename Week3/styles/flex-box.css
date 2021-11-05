@@ -1,0 +1,50 @@
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: rgb(240, 223, 73);
+        margin-top: 50px;
+    }
+  
+    .flex-container > div {
+        background-color: black;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        color: white;
+    }
+
+    /*
+    grid view css
+    */
+
+    .row-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: rgb(44, 139, 124);
+        margin-top: 50px;
+        /* flex-wrap: wrap; */
+    }
+
+    .column-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blue-border {
+        border: 5px solid blue;
+    }
+
+    .red-border {
+        border: 5px solid red;
+    }
+
+    .row-container > div {
+        background-color: black;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        color: white;
+    }
+    
