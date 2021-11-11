@@ -51,3 +51,4 @@ document.querySelector('.stop-print').addEventListener(
         printNumbers = false;
     }
 )
+
