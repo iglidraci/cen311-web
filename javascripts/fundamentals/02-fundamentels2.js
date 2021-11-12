@@ -29,10 +29,10 @@ const inArray = array.includes(3);
 console.log(inArray);
 
 const me = {
-    firstName: 'Igli',
-    lastName: 'Draci',
+    firstName: 'Dennis',
+    lastName: 'Ritche',
     age: 23,
-    friends: ["Lezo", "Boli", "Mili"],
+    friends: ["Bob", "Alice", "Tom"],
     calcBirthYear: function() {
         console.log(this);
         return 2021 - this.age;
@@ -50,9 +50,3 @@ console.log(me);
 console.log(me.calcBirthYear());
 console.log(me.getSummary());
 
-array.forEach(element => {
-    console.log(element)
-});
-
-const newArray = array.map(x => x*x);
-console.log(newArray);

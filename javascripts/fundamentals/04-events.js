@@ -1,4 +1,10 @@
 'use strict';
+
+/**
+ * event types
+ * onchange, onclick, onmouseover, onmouseout, onkeydown, onload
+ */
+
 console.log(document.querySelector('.message').textContent);
 
 document.querySelector('.message').innerHTML = "<h2>Hello JS</h2>";
@@ -31,24 +37,4 @@ document.addEventListener('keydown', event => {
         document.querySelector('.modal').classList.add('hidden');
     }
 });
-
-let printNumbers = true;
-
-document.querySelector(".print").addEventListener(
-    'click', _ => {
-        let counter = 1;
-        while (printNumbers) {
-            setTimeout(() => { 
-                console.log(printNumbers);
-                console.log(counter++);
-             }, 2000);
-        }
-    }
-)
-
-document.querySelector('.stop-print').addEventListener(
-    'click', _ => {
-        printNumbers = false;
-    }
-)
 

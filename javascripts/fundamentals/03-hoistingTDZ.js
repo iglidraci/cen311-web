@@ -1,8 +1,12 @@
-
-// So var variables are hoisted to the top 
+'use strict';
+// var variables are hoisted to the top 
 // of their scope and initialized with a value of undefined
 
 console.log(`first name is ${firstName}`);
+
+var firstName = 'Alice';
+
+
 // console.log(age);
 
 // this is a problem that you might occure with var
@@ -61,32 +65,3 @@ person1.sayHello();
  * var variables are initialized with undefined
  * let and const variables are not initialized
  */
-
-
-
-
-var firstName = "john";
-let age = 23;
-const job = "dev";
-
-console.log(addDec(1, 2));
-// console.log(addExp(1, 2));
-
-function addDec(a, b) {
-    return a + b;
-}
-
-const addExp = function(a, b) {
-    return a + b;
-}
-
-// because of hoisting, it will be initialized as undefined and we try to call it
-// var addExp = function(a, b) {
-//     return a + b;
-// }
-
-const addLambda = (a, b) => a+b;
-
-var x = 1;
-let y = 2;
-const z = 3;
