@@ -14,7 +14,7 @@ console.log(a, b);
 console.log(a, b);
 
 const person = {
-    firstName: 'igli',
+    firstName: 'bob',
     age: 23,
     job: 'developer'
 }
@@ -35,6 +35,6 @@ const obj1 = {
 
 console.log(obj, obj1);
 
-const arr2 = [...arr, 'igli', ...'draci'];
+const arr2 = [...arr, 'bob', ...'alice'];
 
 console.log(arr2);

@@ -4,7 +4,7 @@ console.log(str.length);
 const arr = [1, 2, 3, 4]
 
 console.log(str.indexOf('Wizz'));
-console.log(str.slice(0, 3));
+console.log(str.slice(0, 4));
 
 console.log(str.slice(1, -1));
 const fullName = 'iGLi DRAcI';
@@ -34,7 +34,7 @@ const priceUS = priceGB.replace('£', '$').replace(',', '.');
 
 console.log(priceUS);
 
-const british = "Do I look like a bloke that messages another bloke?!";
+const british = "This bloke is Mary's friend. He's a good bloke!";
 
 const us = british.replace(/bloke/g, 'guy');
 
@@ -43,8 +43,8 @@ console.log(us);
 console.log(british.includes('bloke'));
 console.log(us.includes('bloke'));
 
-const startsWith = 'Do I look';
-const endsWith = '?!';
+const startsWith = 'He\'s';
+const endsWith = '!';
 console.log(british.startsWith(startsWith) && us.startsWith(startsWith));
 console.log(british.endsWith(endsWith) && us.endsWith(endsWith));
 
@@ -55,7 +55,7 @@ console.log(longStr);
 console.log(longStr.split('+'));
 console.log(longStr.split('+').join(' '));
 
-const badName = 'iglI aDEm FADil DRaci';
+const badName = 'guIDo vAn roSSuM';
 // refactor the name so that every part of your name is capitalize and
 // last name is all UPPER
 
@@ -72,9 +72,9 @@ console.log(refactorFunc(badName));
 
 // padding
 
-const team = 'Inter';
+const team = 'XYZ';
 
-console.log(team.padStart(10, '+').padEnd(15, 'He'));
+console.log(team.padStart(10, '+').padEnd(15, '-'));
 
 const padCreditCard = (number) => {
     const str = new String(number);

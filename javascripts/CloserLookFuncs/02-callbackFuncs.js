@@ -8,7 +8,7 @@ const upperFirstWord = (str) => {
     return newWord.join(' ');
 }
 
-const str = 'igli Draci hello world';
+const str = 'dennis ritchie hello world';
 
 const transformer = (str, func) => func(str);
 
