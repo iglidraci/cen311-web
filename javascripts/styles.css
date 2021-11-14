@@ -1,0 +1,29 @@
+:root {
+    --color-primary: green;
+    --color-secondary: yellow;
+}
+
+.simple-message {
+    color: red;
+}
+
+.footer {
+    background-color: brown;
+}
+
+.logo {
+    max-width: 300;
+    max-height: 300px;
+}
+
+nav {
+    font-size: xx-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.nav-link {
+    background-color: rgb(33, 126, 113);
+    cursor: pointer;
+}
