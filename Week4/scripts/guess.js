@@ -1,4 +1,3 @@
-
 'use strict';
 let firstTime = true;
 let firstNumber;
@@ -41,7 +40,7 @@ document.querySelector('#hint').addEventListener(
                     result = `Product is ${firstNumber*secondNumber}`;
                     break;
                 case 0:
-                    result = `Quotient is ${firstNumber%secondNumber}`;
+                    result = `Quotient is ${Math.trunc(firstNumber/secondNumber)}`;
                     break;
             }
             hintOrder++;
@@ -69,14 +68,16 @@ document.querySelector('#check').addEventListener(
     }
 );
 
+const resetGame = () => {
+    firstTime = true;
+    firstNumber = null;
+    secondNumber = null;
+    hintOrder = 1;
+    setInfoParagraph('');
+    document.querySelector('#input1').value = '';
+    document.querySelector('#input2').value = '';
+}
+
 document.querySelector('#reset').addEventListener(
-    'click', () => {
-        firstTime = true;
-        firstNumber = null;
-        secondNumber = null;
-        hintOrder = 1;
-        setInfoParagraph('');
-        document.querySelector('#input1').value = '';
-        document.querySelector('#input2').value = '';
-    }
+    'click', resetGame
 );

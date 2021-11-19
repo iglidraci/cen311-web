@@ -14,18 +14,27 @@ setInterval(() => {
 // create a timer
 
 const setTimer = function() {
-    let remainingSeconds = 65;
+    let remainingSeconds = 10;
     const ourTimer = setInterval(() => {
         const min = String(Math.trunc(remainingSeconds/60)).padStart(2, 0);
         const sec = String(remainingSeconds%60).padStart(2, 0);
-        document.querySelector('#timer').textContent = `You've got ${min}:${sec}`;
+        const timerParagraph = document.querySelector('#timer');
+        timerParagraph.textContent = `You've got ${min}:${sec}`;
         remainingSeconds--;
         // when remainingSeconds 0 stop
         if (remainingSeconds===0){
             clearInterval(ourTimer);
+            timerParagraph.textContent = '';
             document.querySelector('#times-out').textContent='Times up';
         }
     }, 1000);
 }
 
-setTimer();
+const timerButton = document.querySelector('#start-timer');
+timerButton.addEventListener(
+    'click', () => {
+        timerButton.style.display = 'none';
+        setTimer();
+    }
+);
+// setTimer();
