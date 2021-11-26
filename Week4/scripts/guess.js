@@ -3,7 +3,7 @@ let firstTime = true;
 let firstNumber;
 let secondNumber;
 
-const randomIntBetween = (min, max) => {
+export const randomIntBetween = (min, max) => {
     const value = Math.trunc(Math.random()*(max-min) + 1) + min;
     return value;
 }

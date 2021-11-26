@@ -28,6 +28,19 @@ const renderData = function(data) {
     countriesContainer.style.opacity = 1;
 }
 
+const getCountryByName = function(countryName) {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', `https://restcountries.com/v3.1/name/${countryName}`);
+    
+    request.send();
+
+    request.addEventListener('load', function() {
+        const [data] = JSON.parse(this.responseText);
+        renderData(data);
+    })
+};
+
 const getCountryByCode = function(countryCode) {
     const request = new XMLHttpRequest();
 

@@ -33,7 +33,7 @@ const setTimer = function() {
 const timerButton = document.querySelector('#start-timer');
 timerButton.addEventListener(
     'click', () => {
-        timerButton.style.display = 'none';
+        timerButton.style.display = 'none'
         setTimer();
     }
 );
