@@ -1,3 +1,10 @@
+// developer.mozilla.org
+// A Promise is an object for a value not necessarily known when the promise 
+// is created. It allows you to associate handlers with an asynchronous 
+// action's eventual success value or failure reason.
+// 3 states: pending, fulfilled, rejected
+
+
 // promise constructor takes an execture
 const lotteryPromise = new Promise((resolve, reject) => {
     console.log("Buying tickets");
@@ -22,7 +29,7 @@ const wait = (seconds) => {
 wait(3).then(() => {
     console.log("Waited for 3 seconds");
     return wait(2);
-}).then(() => console.log("Waited 2 seconds"));
+}).then(() => console.log("Waited for another 2 seconds"));
 
 // img exercise
 
@@ -142,11 +149,11 @@ Promise.allSettled([
     Promise.resolve('Do you wanna know why I use a knife')
 ]).then(console.log);
 
-
+// Wait for all promises to be resolved, or for any to be rejected.
 Promise.all([
     Promise.resolve('Tada!!'),
     Promise.reject("Sth happend"),
-    Promise.resolve('Do you wanna know why I use a knife')
+    Promise.resolve('You cant savor all the little emotions')
 ]).then(console.log).catch(console.error);
 
 const loadAndPause = async () => {

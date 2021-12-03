@@ -117,7 +117,7 @@ btn.addEventListener('click', () => requestCountryData('ukraine'));
 
 console.log('hello world');
 setTimeout(() => console.log("Hello from time out"), 0);
-Promise.resolve('Resolved promise')
+Promise.resolve('Hello from resolved promise')
         .then(console.log);
 // timer and promise will finish after 0 sec at the same time
 // which will be executed first
