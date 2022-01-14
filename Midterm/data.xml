@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<europe>
+  <country id="1">
+    <name>France</name>
+    <capital>Paris</capital>
+    <density>119</density>
+    <area>543940</area>
+  </country>
+  <country id="2">
+    <name>Germany</name>
+    <capital>Berlin</capital>
+    <density>240</density>
+    <area>357386</area>
+  </country>
+  <country id="3">
+    <name>Russia</name>
+    <capital>Moscow</capital>
+    <density>9</density>
+    <area>17125191</area>
+  </country>
+  <country id="4">
+    <name>Ukraine</name>
+    <capital>Kyiv</capital>
+    <density>75</density>
+    <area>603628</area>
+  </country>
+</europe>

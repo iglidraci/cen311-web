@@ -11,13 +11,10 @@ var firstName = 'Alice';
 
 // this is a problem that you might occure with var
 var position = 'junior';
-
 var workingYears = 20;
-
 if (workingYears > 5) {
     var position = 'senior';
 }
-
 console.log(`position is ${position}`);
 
 

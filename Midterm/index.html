@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Midterm</title>
+    
+</head>
+<body>
+    <div>
+        <h1>Click the button below to load a XML file with AJAX</h1>
+        <button id="load-xml">Load XML</button>
+        <div id="out"></div>
+        <div id="loading"></div>
+    </div>
+    <div style="margin: 20px;">
+        <button id="generator">Generate number</button>
+        <div id="result" style="border: 2px solid black;">
+            Waiting for you to click the button ...
+        </div>
+    </div>
+    <div id="table" style="margin: 20px">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Foo
+                        </li>
+                        <li>
+                            Bar
+                        </li>
+                        <li>
+                            Baz
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    <ol type="I">
+                        <li>
+                            Foo
+                        </li>
+                        <li>
+                            Bar
+                        </li>
+                        <li>
+                            Baz
+                        </li>
+                    </ol>
+                </td>
+                <td>
+                    <ol type="1">
+                        <li>
+                            Spain
+                            <ol type="A">
+                                <li>Real Madrid</li>
+                                <li>Atletico Madrid</li>
+                                <li>Sevilla</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Germany
+                            <ol type="A">
+                                <li>Bayern Munchen</li>
+                                <li>Borussia Dortmund</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="languages">Choose a language:</label>
+                    <select name="languages" id="languages">
+                        <option>JavaScript</option>
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>C++</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="check_me">Check me</label>
+                    <input type="checkbox" id="check_me" checked>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <form>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password">
+                        <label for="textarea">Describe yourself:</label>
+                        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="table2" style="margin: 20px">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Foo
+                        </li>
+                        <li>
+                            Bar
+                        </li>
+                        <li>
+                            Baz
+                        </li>
+                    </ul>
+                </td>
+                <td rowspan="3">
+                    <form>
+                        <label for="email2">Username:</label>
+                        <input type="email" name="email" id="email2">
+                        <label for="password2">Password:</label>
+                        <input type="password" name="password" id="password2">
+                        <label for="textarea2">Biography:</label>
+                        <textarea name="textarea2" id="textarea2" cols="30" rows="10"></textarea>
+                        <label for="languages2">Favourite animal:</label>
+                        <select name="languages2" id="languages2">
+                            <option>None</option>
+                            <option>Cat</option>
+                            <option>Dog</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ol type="I">
+                        <li>
+                            Italy
+                            <ol type="i">
+                                <li>Inter</li>
+                                <li>Napoli</li>
+                                <li>Atalanta</li>
+                            </ol>
+                        </li>
+                        <li>
+                            England
+                            <ol type="i">
+                                <li>Manchester United</li>
+                                <li>Liverpool</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="" alt="image is missing">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="table3" style="margin: 20px">
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Foo
+                        </li>
+                        <li>
+                            Bar
+                        </li>
+                        <li>
+                            Baz
+                        </li>
+                    </ul>
+                </td>
+                <td rowspan="3">
+                    <form>
+                        <label for="email2">Username:</label>
+                        <input type="email" name="email" id="email2">
+                        <label for="password2">Password:</label>
+                        <input type="password" name="password" id="password2">
+                        <label for="textarea2">Biography:</label>
+                        <textarea name="textarea2" id="textarea2" cols="30" rows="10"></textarea>
+                        <label for="languages2">Favourite animal:</label>
+                        <input type="textarea">Textarea
+                        
+                        <img src="aa" alt="missing"><p>aaaa</p>
+                        <select name="languages2" id="languages2">
+                            <option>None</option>
+                            <option>Cat</option>
+                            <option>Dog</option>
+                        </select>
+                        <select>
+                            
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ol type="I">
+                        <li>
+                            Italy
+                            <ol type="i">
+                                <li>Inter</li>
+                                <li>Napoli</li>
+                                <li>Atalanta</li>
+                            </ol>
+                        </li>
+                        <li>
+                            England
+                            <ol type="i">
+                                <li>Manchester United</li>
+                                <li>Liverpool</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- <img src="" alt="image is missing"> -->
+                    <span><img src=""></span><span>Image missing</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="calculator">
+        <label for="calculator-input1">Enter number 1:</label>
+        <input type="number" id="calculator-input1">
+        <br>
+        <label for="calculator-input2">Enter number 2:</label>
+        <input type="number" id="calculator-input2">
+        <div style="padding: 20px;">
+            <button id="add-btn">Add</button>
+            <button id="sub-btn">Sub</button>
+            <button id="mul-btn">Mul</button>
+        </div>
+        <div id="calculator-output">
+            Waiting to calculate something ...
+        </div>
+        
+        <div>
+            
+        </div>
+    </div>
+    <div class="color-me">
+        <div>Hello</div>
+        <div>World</div>
+        <div>Marry Christmas</div>
+    </div>
+    <script>
+        const div = document.querySelector('.color-me');
+        const divs = div.querySelectorAll('div');
+        divs.forEach((el) => {
+            el.addEventListener('mouseover', () => {
+                el.style.backgroundColor = 'red';
+            })
+        });
+    </script>
+    <ol>
+        <ul>foo</ul>
+        <ul>foo</ul>
+        <ul>foo</ul>
+        <ul>foo</ul>
+    </ol>
+
+    <script>
+        const fact = (x) => x > 1 ? x*fact(x-1) : 1;
+        console.log(fact(5));
+    </script>
+
+</body>
+</html>
