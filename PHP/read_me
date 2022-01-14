@@ -1,2 +1,0 @@
-Don't forget to make your ajax request using http://, not file://
-Basically run your app on a web server (VS Code Live Server for example or https://www.npmjs.com/package/http-server or install a webserver of your own)
