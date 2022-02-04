@@ -113,6 +113,16 @@ const getSeasonsPerLeague = (leagueId) => {
     })
 }
 
+const getBooks = () => {
+    isLoading();
+    const url = 'http://localhost:8080/bookstore_oop/api/book/list.php';
+    fetch(url)
+        .then(response => response.json())
+        .then(console.log)
+        .catch(handleError)
+        .finally(stopLoading);
+}
+
 
 const getSeasonsPerLeagueWithPromise = (leagueId) => {
     isLoading();
@@ -198,3 +208,5 @@ tableContainer.addEventListener('click', (event) => {
         getTableForSeason(leagueId, year);
     }
 });
+
+getBooks();
