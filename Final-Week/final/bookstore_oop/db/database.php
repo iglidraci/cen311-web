@@ -17,15 +17,13 @@
         private $password;
         private $charset = 'utf8mb4';
         private $connection = null;
-        private $environment = Environment::Development;
+        private $environment = Environment::Production;
         public function __construct () {
             if ($this->environment === Environment::Development) {
-                $this -> host = '127.0.0.1';
                 $this -> db = 'bookstore_db';
                 $this -> user = 'root';
                 $this -> password = '';
             } elseif ($this -> environment === Environment::Production) {
-                $this -> host = 'localhost';
                 $this -> db = 'web22_idraci';
                 $this -> user = 'idraci';
                 // get it from environment variables
