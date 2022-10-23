@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <h1>Please fill out this form</h1>
+    <form method="post" action="">
+        <input type="hidden" id="csrf_token" name="csrf_token" value="1234">
+
+        <label for="name">Name: </label><br>
+        <!-- The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together. -->
+        <input type="text" id="name" required maxlength="10">
+        <br>
+
+        <fieldset>
+            <legend>Login details</legend>
+            <label for="password">Password: </label><br>
+            <input type="password" id="password">
+            <br>
+    
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" placeholder="name@domain.com" autofocus autocomplete="on">
+            <br>
+        </fieldset>
+
+        
+
+        <label for="age">Age</label><br>
+        <input id="age" type="number" min="18" step="2">
+        <br>
+
+        <label for="description">Describe yourself: </label><br>
+        <textarea id="description" rows="4" cols="40"></textarea>
+        <br>
+
+        <p>Gender</p>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        
+        <p>Favorite subjects</p>
+        <input type="checkbox" id="history" value="HIS">
+        <label for="history">History</label>
+        <input type="checkbox" id="geography" value="GEO">
+        <label for="geography">Geography</label>
+        <input type="checkbox" id="math" value="MTH">
+        <label for="math">Math</label>
+        <br>
+
+        <label for="favcolor">Select your favorite color:</label> <br>
+        <input type="color" id="favcolor"><br>
+
+        <label for="birthday">Birthday:</label><br>
+        <input type="date" id="birthday"><br>
+
+        <label for="current_time">Current time:</label><br>
+        <input type="time" id="current_time"><br>
+        
+        <label for="cv">Upload your CV:</label><br>
+        <input type="file" id="cv" name="cv"><br>
+
+        <label for="pages">Pages/day (between 0 and 100):</label><br>
+        <input type="range" id="pages" name="pages" min="0" max="100"><br>
+
+        <label for="phone">Phone number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+
+        <label for="search">Search query:</label><br>
+        <input type="search" placeholder="Search here ..." id="search"><br>
+
+        <label for="languages">Go to language</label><br>
+        <select id="languges">
+            <option selected>----</option>
+            <optgroup label="Object Oriented">
+                <option value="java">Java</option>
+                <option value="c#">C#</option>
+            </optgroup>
+            <optgroup label="Procedural">
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
+            </optgroup>
+        </select><br>
+
+        <input type="submit" value="Submit"> | <input type="reset">
+
+    </form>
+    <iframe src="01_hello.html" height="200" width="300" title="Iframe Example"></iframe>
+    <p id="bottom">Don't mind me, I'm at the bottom</p>
+</body>
+</html>

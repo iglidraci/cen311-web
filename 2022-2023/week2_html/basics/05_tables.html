@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<body>
+    <table border="1">
+        <caption>Table of fruits</caption>
+        <summary>This table shows some fruits that we have to buy and their prices</summary>
+
+        <thead>
+            <tr>
+                <th>Fruit</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc -->
+                <td>Apple</td>
+                <td>$1</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>$2</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>$3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <th>$6</th>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <h1>Table Example: Spanning Rows and Columns</h1>
+    <table border="1" bgcolor="#efefef">
+        <caption>A more complex table</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">
+                    <img src="images/cat.png" alt="picture of a cat">
+                </th>
+                <th colspan="3">
+                    <strong>
+                        Felidea comparison
+                    </strong>
+                </th>
+            </tr>
+            <tr>
+                <th>Average weight</th>
+                <th>Indigenous region</th>
+                <th>Pets</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Ocelot</th>
+                <th>8-16 kg</th>
+                <th>US, Mexico and SA</th>
+                <th>No</th>
+            </tr>
+            <tr>
+                <th>Lynx</th>
+                <th>8-11 kg</th>
+                <th>Canada, US, here</th>
+                <th>No</th>
+            </tr>
+            <tr>
+                <th>Caracal</th>
+                <th>7-19 kg</th>
+                <th>Africa, India and Arabian Peninsula</th>
+                <th>No</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr><br><br>
+    <!-- Following table from https://html.com/tables/ -->
+    <table border="1">
+        <caption>A complex table</caption>
+        <thead>
+            <tr>
+                <th colspan="3">Invoice #123456789</th>
+                <th>14 January 2025
+            </tr>
+            <tr>
+                <td colspan="2"> <strong>Pay to:</strong><br> Acme Billing Co.<br> 123 Main St.<br> Cityville, NA 12345
+                </td>
+                <td colspan="2"> <strong>Customer:</strong><br> John Smith<br> 321 Willow Way<br> Southeast
+                    Northwestershire, MA 54321 </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Name / Description</th>
+                <th>Qty.</th>
+                <th>@</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Paperclips</td>
+                <td>1000</td>
+                <td>0.01</td>
+                <td>10.00</td>
+            </tr>
+            <tr>
+                <td>Staples (box)</td>
+                <td>100</td>
+                <td>1.00</td>
+                <td>100.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Subtotal</th>
+                <td> 110.00</td>
+            </tr>
+            <tr>
+                <th colspan="2">Tax</th>
+                <td> 8% </td>
+                <td>8.80</td>
+            </tr>
+            <tr>
+                <th colspan="3">Grand Total</th>
+                <td>$ 118.80</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+</body>
+
+</html>
