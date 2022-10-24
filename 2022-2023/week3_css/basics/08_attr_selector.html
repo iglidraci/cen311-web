@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a[target="_blank"] {
+            background-color: brown;
+        }
+        /* containing the word */
+        h2[title~=bee] {
+            background-color: yellow;
+            color: black;
+        }
+        /* starting with */
+        h3[title|=zebra] {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <p>Styles elements that have specific attributes or attribute values</p>
+    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <h2 title="a smol bee">A bee</h2>
+    <h3 title="zebra-crossing">Step here</h3>
+</body>
+</html>

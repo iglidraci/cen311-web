@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal styles</title>
+    <style type="text/css">
+        em {
+            color: red;
+            font-weight: bold;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+        }
+        .special {
+            color: purple;
+        }
+        #fantasy {
+            font-family: fantasy;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .red-header {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p>This is a <em>paragraph</em></p>
+    <h1 class="special">This header is special</h1>
+    <h1 id="fantasy">This is a fantasy</h1>
+    <div class="special">
+        <h1 class="red-header">This is inside the <em>div</em></h1>
+        <a>This is a link</a>
+    </div>
+    <!-- Multiple values of one property can be set or
+inherited on the same element, so the browser
+must reduce them to one value for that property
+per element before they’re rendered. -->
+</body>
+</html>

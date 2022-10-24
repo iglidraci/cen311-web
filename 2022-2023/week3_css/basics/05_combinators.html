@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator selectors</title>
+    <style>
+        div h2 {
+            color: orange;
+        }
+        div > p {
+            color: red;
+        }
+
+        p + h3 {
+            color: blue;
+        }
+
+        h4 ~ h5 {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Combinators</h2>
+        <p>4 types</p>
+        <dl>
+            <dt>descendant selector (space)</dt>
+            <dd>matches all elements that are descendants of a specified element</dd>
+            <dt>child selector (>)</dt>
+            <dd>selects all elements that are the children of a specified element</dd>
+            <dt>adjacent sibling selector (+)</dt>
+            <dd>select an element that is directly after another specific element</dd>
+            <dt>general sibling selector (~)</dt>
+            <dd>selects all elements that are next siblings of a specified element</dd>
+        </dl>
+        <section><h2>Another header</h2></section>
+        <section><p>Another paragraph</p></section>
+        
+        <div>
+            <p>Paragraph</p>
+            <h3>This is a h3 header</h3>
+            <h3>This is a h3 header</h3>
+        </div>
+        <div>
+            <h4>This is a h4 header</h4>
+            <p>Paragraph</p>
+            <h5>This is a h5 header</h5>
+            <p>Paragraph</p>
+            <h5>This is a h5 header</h5>
+        </div>
+    </div>
+    
+</body>
+</html>
