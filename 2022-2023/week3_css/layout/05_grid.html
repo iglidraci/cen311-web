@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        /*
+        Grid Container
+        Set display property to grid so that an element behaves as a grid container
+        grid-template-columns sets the number of columns in the grid and the width of each column
+        grid-template-rows defines the height of each row
+        justify-content property is used align the grid
+        */
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px auto auto;
+            grid-template-rows: 200px 100px;
+            justify-content: space-evenly;
+        }
+        .container > p {
+            text-align: center;
+            border: 2px solid blue;
+            font-size: 200%;
+            font-weight: bold;
+        }
+
+        /*
+        Grid Items
+        A container has one grid item for each row, column (cell) but you can span multiple rows, multiple columns
+        grid-column property defines the start column and the end column of the item
+        grid-row defines start and end row
+        */
+        .item1 {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+    </div>
+</body>
+</html>

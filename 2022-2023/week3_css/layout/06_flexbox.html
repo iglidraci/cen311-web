@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        /*
+        To start using flex set the property display: flex
+        Properties of flexbox layout
+        1) flex-direction: defines in which direction the container will stack items (row, column)
+        2) flex-wrap: should the flex items wrap or not (wrap, nowrap)
+        3) flex-flow: shorthand for setting both the flex-direction and flex-wrap
+        4) justify-content: horizontally aligns flex items
+            -> center: aligns the flex items at the center of the container
+            -> flex-start: this is the deafult one
+            -> flex-end: aligns the flex items at the end of the container
+            -> space-around: displays items with space before, between, and after the lines
+            -> space-between: displays items with space between the lines
+        5) align-items: vertically aligns flex items
+            -> flex-start
+            -> flex-end
+            -> center
+            -> stretch
+        */
+        .container {
+            background-color: grey;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container > p {
+            border: 2px dashed darkred;
+            padding: 20px;
+            font-size: 200%;
+        }
+        /*
+        Flex items (direct children of a flex container)
+        Properties of flex item
+        1) order: the first flex item might not necessarily be the first in the layout
+        2) flex-grow: how much a flex item will grow relative to the rest of the flex items
+        3) flex-shrink: how much a flex item will shrink relative to the rest of the flex items
+        4) flex-basis: specifies the initial length of a flex item
+        5) align-self: specifies the alignment for the selected item inside the container, overrides the default one
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+    </div>
+
+    <div class="container">
+        <p style="order: 3">1</p>
+        <p style="order: 2">2</p>
+        <p style="order: 4; flex-basis: 200px;">3</p>
+        <p style="order: 1; align-self: center;">4</p>
+      </div>
+</body>
+</html>

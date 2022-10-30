@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        #green {
+            color: green;
+        }
+        .blue {
+            color: blue;
+        }
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="green" class="blue" style="color: orange;">Specificity test</p>
+    <h1>How to calculate specificity</h1>
+    <ul>
+        <li>Inline styling: 1000</li>
+        <li>IDs: 100</li>
+        <li>Classes and pseudo classes: 10</li>
+        <li>Elements and pseudo elements: 1</li>
+    </ul>
+
+    <h2>Find specificity</h2>
+    <ul>
+        <li>
+            h1.example
+        </li>
+        <li>
+            h1#example
+        </li>
+        <li>
+            #example
+        </li>
+        <li>
+            &lt;h1 style="color: red;"&gt; &lt;/h1&gt;
+        </li>
+        <li>
+            #main p#hidden
+        </li>
+    </ul>
+
+    <h2>More rules</h2>
+    <ol>
+        <li>
+            If both specificity values are the same, the latest one wins
+        </li>
+        <li>
+            Internal stylesheet wins over external stylesheet
+        </li>
+        <li>
+            The universal selector * has specificity value 0
+        </li>
+    </ol>
+</body>
+</html>
