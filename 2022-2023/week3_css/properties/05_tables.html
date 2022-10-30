@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table styling</title>
+    <style>
+        body {
+            font-family: Arial, Verdana, sans-serif;
+            color: #111111;
+        }
+
+        table {
+            width: 600px;
+        }
+
+        th,
+        td {
+            padding: 7px 10px 10px 10px;
+        }
+
+        th {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 90%;
+            border-bottom: 2px solid #111111;
+            border-top: 1px solid #999;
+            text-align: left;
+        }
+
+        tr.even {
+            background-color: #efefef;
+        }
+
+        tr:hover {
+            background-color: #c3e6e5;
+        }
+
+        .money {
+            text-align: right;
+        }
+
+        /*
+        Empty cells
+        */
+        table {
+            empty-cells: hide;
+        }
+
+        /*
+        Gaps between cells
+        The border-spacing property allows you to control the distance between adjacent cells
+        The border-collapse property is used to collapse adjacent borders since the width of the lines would
+        be twice that of the edges
+        */
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th class="money">Price</th>
+        </tr>
+        <tr>
+            <td>E.E. Cummings</td>
+            <td>Tulips & Chimneys</td>
+            <td></td>
+            <td class="money">$2,642.50</td>
+        </tr>
+        <tr class="even">
+            <td>Charles d'Orleans</td>
+            <td>Poemes</td>
+            <td></td>
+            <td class="money">$5,866.00</td>
+        </tr>
+        <tr>
+            <td>T.S. Eliot</td>
+            <td>Poems 1909 - 1925</td>
+            <td></td>
+            <td class="money">$8,499.35</td>
+        </tr>
+        <tr class="even">
+            <td>Sylvia Plath</td>
+            <td>The Colossus</td>
+            <td></td>
+            <td class="money">$1031.72</td>
+        </tr>
+    </table>
+</body>
+
+</html>

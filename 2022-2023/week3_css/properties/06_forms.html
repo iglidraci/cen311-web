@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form styling</title>
+    <style>
+        fieldset {
+            width: 310px;
+            margin-top: 20px;
+            border: 1px solid #d6d6d6;
+            background-color: #ffffff;
+            line-height: 1.6em;
+        }
+
+        legend {
+            font-style: italic;
+            color: #666666;
+        }
+
+        input[type="text"] {
+            width: 120px;
+            border: 1px solid #d6d6d6;
+            padding: 2px;
+            outline: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="text"]:hover {
+            background-color: #d0e2f0;
+            border: 1px solid #999999;
+        }
+
+        input[type="submit"] {
+            border: 1px solid #006633;
+            background-color: #009966;
+            color: #ffffff;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            border: 1px solid #006633;
+            background-color: #00cc33;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .title {
+            float: left;
+            width: 160px;
+            clear: left;
+        }
+
+        .submit {
+            width: 310px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Register</legend>
+            <p><label class="title" for="name">Name</label>
+                <input type="text" name="name" id="name"><br />
+                <label class="title" for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </p>
+            <p><label for="nationality" class="title">Your nationality:</label>
+                <select name="nationality" id="nationality">
+                    <option value="al">Albanian</option>
+                    <option value="de">German</option>
+                    <option value="en">English</option>
+                </select>
+            </p>
+            <span class="title">Gender</span>
+            <label><input type="radio" name="member" value="m" /> Male</label>
+            <label><input type="radio" name="member" value="f" /> Female</label>
+        </fieldset>
+        <div class="submit"><input type="submit" value="Register" /></div>
+    </form>
+</body>
+
+</html>

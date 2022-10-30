@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        /*
+        Normal flow
+        Each block-level element sits on top of the next one, default behavior
+        position: static
+        */
+        /*
+        Relative
+        Relative positioning moves an element in relation to where it would have been in normal flow
+        You can move it 10px lower than it would have been or 20% to the right (box offset properties)
+        */
+        p {
+            width: 450px;
+        }
+
+        p.example {
+            position: relative;
+            top: 10px;
+            left: 20%;
+        }
+
+        /*
+        Absolute positioning
+        When position is set to absolute, the box is taken out of the normal flow and no longer
+        affects the position of other elements on the page
+        The box offset properties specify where the element should appear in relation to its containing element
+        */
+        h1 {
+            position: absolute;
+            top: 0px;
+            left: 500px;
+            width: 250px;
+        }
+
+        /*
+        Fixed position
+        A type of absolute positioning, when user scrolls it stays in the exact same place
+        */
+        /* h1 {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            padding: 10px;
+            margin: 0px;
+            width: 100%;
+            background-color: #efefef;
+        } */
+
+        /*
+        Overlapping elements
+        Elements that appear later in the HTML code sit on top of elements that appear later
+        z-index (stacking context)
+        */
+    </style>
+</head>
+
+<body>
+    <h1>Servals</h1>
+    <p>
+        The serval (Leptailurus serval) is a wild cat native to Africa. It is widespread in sub-Saharan countries,
+        except rainforest regions. Across its range, it occurs in protected areas, and hunting it is either prohibited
+        or regulated in range countries.
+    </p>
+    <p class="example">
+        The serval is a solitary carnivore and active both by day and at night. It preys on rodents, particularly vlei
+        rats, small birds, frogs, insects, and reptiles, using its sense of hearing to locate prey. It leaps over 2 m (6
+        ft 7 in) above the ground to land on the prey on its forefeet, and finally kills it with a bite on the neck or
+        the head. Both sexes establish highly overlapping home ranges of 10 to 32 km2 (4 to 12 sq mi), and mark them
+        with feces and saliva.
+    </p>
+    <p>
+        Mating takes place at different times of the year in different parts of their range, but
+        typically once or twice a year in an area. After a gestational period of two to three months, a litter of one to
+        four is born. The kittens are weaned at the age of one month and begin hunting on their own at six months of
+        age. They leave their mother at the age of around 12 months.
+    </p>
+</body>
+
+</html>

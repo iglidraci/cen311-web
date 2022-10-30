@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating</title>
+    <style>
+        /*
+        The float property places an element as far to the right or left of the containing element as possible.
+        Everything else inside the containing element will flow around the floated element
+        */
+        blockquote {
+            float: right;
+            width: 175px;
+            font-style: italic;
+            font-family: Georgia, Times, serif;
+            margin: 0px 0px 10px 10px;
+            padding: 10px;
+            border-top: 1px solid #665544;
+            border-bottom: 1px solid #665544;
+            top: 0;
+        }
+
+        /*
+        Placing elements side by side
+        */
+
+        body {
+            width: 750px;
+            font-family: Arial, Verdana, sans-serif;
+            color: #665544;
+        }
+
+        p.side {
+            width: 230px;
+            float: left;
+            margin: 5px;
+            padding: 5px;
+            background-color: #efefef;
+        }
+
+        /*
+        Clearing floats
+        Clear property states that no element should touch the left or right (or both) sides of a box
+        */
+
+        .clear {
+            clear: left;
+        }
+
+        div {
+            border: 1px solid #665544;
+            overflow: auto;
+            width: 100%;
+        }
+
+        /*
+        Multi-column layouts with floats
+        width, float, and margin
+        */
+
+        .column1of3,
+        .column2of3,
+        .column3of3 {
+            width: 200px;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Lynx
+    </h1>
+    <p>
+        Lynx have a short tail, characteristic tufts of black hair on the tips of their ears, large, padded paws for
+        walking on snow and long whiskers on the face. Under their neck, they have a ruff, which has black bars
+        resembling a bow tie, although this is often not visible.
+    <blockquote>The name lynx originated in Middle English via Latin</blockquote>
+
+    </p>
+    <p>
+        Body colour varies from medium brown to goldish to beige-white, and is occasionally marked with dark brown
+        spots,
+        especially on the limbs. All species of lynx have white fur on their chests, bellies and on the insides of their
+        legs, fur which is an extension of the chest and belly fur. The lynx's colouring, fur length and paw size vary
+        according to the climate in their range. In the Southwestern United States, they are short-haired, dark in
+        colour
+        and their paws are smaller and less padded. As climates get colder and more northerly, lynx have progressively
+        thicker fur, lighter colour, and their paws are larger and more padded to adapt to the snow. Their paws may be
+        larger than a human hand or foot.
+    </p>
+    <p>
+        The smallest species are the bobcat and the Canada lynx, while the largest is the Eurasian lynx, with
+        considerable
+        variations within species.
+    </p>
+
+    <h1>Lynx</h1>
+    <div>
+        <p class="side">
+            Lynx have a short tail, characteristic tufts of black hair on the tips of their ears, large, padded paws for
+            walking on snow and long whiskers on the face. Under their neck, they have a ruff, which has black bars
+            resembling a bow tie, although this is often not visible.
+
+        </p>
+        <p class="side">
+            Body colour varies from medium brown to goldish to beige-white, and is occasionally marked with dark brown
+            spots,
+            especially on the limbs. All species of lynx have white fur on their chests, bellies and on the insides of
+            their
+            legs, fur which is an extension of the chest and belly fur. The lynx's colouring, fur length and paw size
+            vary
+            according to the climate in their range.
+        </p>
+        <p class="side">
+            In the Southwestern United States, they are short-haired, dark in
+            colour
+            and their paws are smaller and less padded. As climates get colder and more northerly, lynx have
+            progressively
+            thicker fur, lighter colour, and their paws are larger and more padded to adapt to the snow. Their paws may
+            be
+            larger than a human hand or foot.
+        </p>
+        <p class="side clear">
+            The smallest species are the bobcat and the Canada lynx, while the largest is the Eurasian lynx, with
+            considerable
+            variations within species.
+        </p>
+    </div>
+
+    <h1>The Evolution of the Bicycle</h1>
+    <div class="column1of3">
+        <h3>The First Bicycle</h3> ...
+    </div>
+    <div class="column2of3">
+        <h3>Further Innovations</h3> ...
+    </div>
+    <div class="column3of3">
+        <h3>Bicycle Timeline</h3> ...
+    </div>
+
+</body>
+
+</html>

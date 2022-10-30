@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <style>
+        /*dimensions*/
+        div {
+            height: 300px;
+            width: 400px;
+            background-color: #ee3e80;
+        }
+
+        p {
+            height: 75%;
+            width: 75%;
+            background-color: #e1ddda;
+        }
+
+        /*
+        overflowing content
+        overflow property tells the browser what to do if the content contained within a box is larger than the box
+        hidden: hides any extra content
+        scroll: adds a scrollbar to see the missing content
+        */
+        .small-box {
+            height: 150px;
+            width: 150px;
+            overflow: scroll;
+        }
+
+        /*
+        Borders
+
+        */
+
+        h3.one {
+            border-style: solid;
+            border-width: 2px;
+            border-color: #0088dd;
+        }
+
+        h3.two {
+            border-style: dotted;
+            border-width: thick;
+            border-color: #bbbbaa #111111 #ee3e80 #0088dd;
+        }
+
+        h3.three {
+            border-style: solid;
+            border-width: 1px 4px 12px 4px;
+        }
+
+        /*
+        Shorthand
+        border property allows you to specify the width, style and color in one property
+        */
+        h3.four {
+            border: 3px dotted darkorange;
+        }
+
+        /*
+        Padding
+        The padding property allows you to specify how much space should appear between the content of an element and its border.
+        */
+        p.example {
+            width: 275px;
+            border: 2px solid #0088dd;
+            padding: 10px 20px 10px 20px;
+        }
+
+        /*
+        Margin
+        The margin property controls the gap between boxes.
+        */
+
+        p.example.example2 {
+            margin: 50px;
+        }
+
+        /*
+        Change Inline/Block
+        The display property allows you to turn an inline into a block or vise versa, hide elements
+        The values it can take: inline, block, inline-block, and none
+        */
+
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        li.coming-soon {
+            display: none;
+        }
+
+        /*
+        Hiding boxes
+        The visibility property allows to hide boxes from users but leaves a space where the
+        element would have been
+        */
+
+        li.hide {
+            visibility: hidden;
+        }
+
+        /*
+        Box shadows
+        The box-shadow property adds a drop shadow around a box
+        */
+        li.special {
+            box-shadow: 5px 5px 5px #777777;
+        }
+        /*
+        Rounded corners
+        The property border-radius creates rounded corners on any box
+        */
+        .rounded-box {
+            border: 5px solid #ee3e80;
+            padding: 20px;
+            width: 275px;
+            border-radius: 50px;
+            /* border-radius: 80px 50px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            The ocelot is a medium-sized spotted wild cat that reaches 40-50 cm at the shoulders and weighs between 7
+            and 15.5 kg on average.<br>
+            It was first described by Carl Linnaeus in 1758. Two subspecies are recognized
+        </p>
+    </div>
+    <div class="small-box">
+
+        The ocelot is a medium-sized spotted wild cat that reaches 40-50 cm at the shoulders and weighs between 7 and
+        15.5 kg on average.<br>
+        It was first described by Carl Linnaeus in 1758. Two subspecies are recognized
+
+    </div>
+
+    <h3 class="one">
+        Vol. 1: Fundamental Algorithms
+    </h3>
+    <h3 class="two">
+        The: Seminumerical Algorithms, Volume 2
+    </h3>
+    <h3 class="three">
+        Sorting and Searching, Volume 3
+    </h3>
+    <h3 class="four">
+        The: Combinatorial Algorithms, Volume 4A
+    </h3>
+
+    <p class="example">
+        This multivolume work on the analysis of algorithms has long been recognized as the definitive description of
+        classical computer science.
+        The four volumes published to date already comprise a unique and invaluable resource in programming theory and
+        practice.
+        Countless readers have spoken about the profound personal influence of Knuth’s writings.
+    </p>
+
+    <p class="example example2">
+        This multivolume work on the analysis of algorithms has long been recognized as the definitive description of
+        classical computer science.
+        The four volumes published to date already comprise a unique and invaluable resource in programming theory and
+        practice.
+        Countless readers have spoken about the profound personal influence of Knuth’s writings.
+    </p>
+
+    <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li class="coming-soon">Services</li>
+        <li class="hide">Profile</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li class="special">Subscribe</li>
+    </ul>
+
+    <p class="rounded-box">
+        The Monadology is one of Gottfried Leibniz's best known works of his later philosophy. <br>
+        It is a short text which presents, in some 90 paragraphs, a metaphysics of simple substances, or monads
+    </p>
+</body>
+
+</html>

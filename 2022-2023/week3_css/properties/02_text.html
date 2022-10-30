@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text styling</title>
+    <style>
+        body {
+            font-family: Georgia, Times, serif;
+        }
+
+        h1,
+        h2 {
+            font-family: Arial, Verdana, sans-serif;
+            /* font-size: 3em; */
+            text-transform: uppercase;
+        }
+
+        .credits {
+            font-family: "Courier New", Courier, monospace;
+            font-weight: bold;
+            font-style: oblique;
+            /*normal, italic or oblique*/
+            text-decoration: underline;
+            /*none, overline, line-through, dashed ...*/
+        }
+
+        /* @font-face allows you to use a font even if it's not installed on the client's computer */
+        @font-face {
+            font-family: 'ChunkFiveRegular';
+            src: url('fonts/chunkfive.eot');
+        }
+
+        h1,
+        h2 {
+            font-family: ChunkFiveRegular, Georgia, serif;
+        }
+
+        p {
+            text-align: left;
+            /*right, center, justify*/
+        }
+
+        /*Vertical Alignment, commonly used with inline elements */
+        #six-months {
+            vertical-align: text-top;
+        }
+
+        #one-year {
+            vertical-align: text-bottom;
+        }
+
+        /*
+        pseudo classes and pseudo elements
+        */
+    </style>
+</head>
+
+<body>
+
+    <h1>Caracal</h1>
+    <p class="credits">by me</p>
+    <p>
+        The caracal, is a medium-sized wild cat native to Africa, the Middle East, Central Asia, and arid areas of
+        Pakistan and northwestern India.<br> It is characterised by a robust build, long legs, a short face, long tufted
+        ears, and long canine teeth
+    </p>
+    <h2>Caracal Life Stages</h2>
+    <p><img src="images/baby-caracal.jpg" width="100" height="150" id="six-months">Six months</p>
+    <p><img src="images/Caracal-portrait.jpg" width="100" height="150" id="one-year">One year</p>
+</body>
+
+</html>
