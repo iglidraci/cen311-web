@@ -22,8 +22,8 @@ const priceUS = priceGB.replace('£', '$').replace(',', '.');
 console.log(priceUS);
 
 const badName = 'guIDo vAn roSSuM';
-// refactor the name so that every part of your name is capitalize and
-// last name is all UPPER
+
+// refactor the name so that every part of your name is capitalize and last name is all UPPER
 
 const refactorFunc = (str) => {
     const splitted = str.split(' ');

@@ -9,6 +9,7 @@ if (true) {
     console.log(x + y + z); // → 60
 }
 // y is not visible here
+// console.log(y); // Uncaught ReferenceError
 console.log(x + z); // → 40
 
 /*
@@ -22,7 +23,7 @@ const bakeCake = function(factor) {
         if (ingredientAmount > 1) {
             unit += "s";
         };
-        console.log(`${ingredientAmount} ${unit} ${name}`);
+        console.log(`${ingredientAmount} ${unit} of ${name}`);
     }
     ingredient(2, "unit", "egg");
     ingredient(3, "cup", "flour");

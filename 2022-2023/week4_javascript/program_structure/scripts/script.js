@@ -70,3 +70,17 @@ switch(+prompt("what day is today?")) {
 }
 
 const gender = 'M';
+
+// labels
+
+let k, j;
+
+loop1:
+for (k = 0; k < 3; k++) {      //The first for statement is labeled "loop1"
+    for (j = 0; j < 3; j++) {
+        if (k === 1 && j === 1) {
+            continue loop1;
+        }
+        console.log(`k = ${k}, j = ${j}`);
+    }
+}
