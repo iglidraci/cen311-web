@@ -1,0 +1,25 @@
+MDN reference: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+What is the DOM?
+
+The DOM (Document Object Model) is the data representation of the objects that
+comprise the structure and content of a document on the web
+Through DOM, programs can change the document structure, style and content.
+
+The DOM is not part of JS but a Web API
+The DOM is independent of any programming language (we will only use it through JS)
+
+Fundamental data types (interfaces)
+
+1) Document
+The Document interface represents any web page loaded in the browser and serves as an entry point
+into the web page's content, which is the DOM tree.
+2) Node
+Every object located within a document is a node of some kind
+(element node, text node, attribute node)
+3) Element
+The element type is based on node. It refers to an element or a node of type element returned by a member of the DOM API
+4) NodeList
+A nodeList is an array of elements
+5) Attr
+Attributes are nodes in the DOM just like elements are
