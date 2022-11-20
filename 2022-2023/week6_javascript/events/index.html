@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css"></link>
+    <title>Events</title>
+    <!-- <script src="scripts/01_events.js" defer></script> -->
+    <!-- <script src="scripts/02_event_obj.js" defer></script> -->
+    <!-- <script src="scripts/04_pointer.js" defer></script> -->
+    <!-- <script src="scripts/06_event_loop.js" defer></script> -->
+    <script src="scripts/07_worker.js" defer></script>
+</head>
+<body>
+    <p>Click anywhere in the document to activate the handler</p>
+    <p>Click this button to remove the event listener</p>
+    <button id="cancel-window">Remove</button> <br>
+    <p id="click-p"><button id="click-btn">Click me</button></p>
+    <p>Cannot open <a id="twitter-a" href="https://www.twitter.com">Twitter</a></p>
+    <hr>
+    <p>Hold down the key C to change color</p>
+    <div id="canvas">
+        <p>Draw something</p>
+    </div>
+    <p>Drag the bar to change its width:</p>
+    <div id="drag-div" style="background: orange; width: 60px; height: 20px">
+    </div>
+    <form>
+        <p>Name: <input type="text" data-help="Enter your full name"></p>
+        <p>Age: <input type="number" data-help="You should be at least 18"></p>
+        <div id="info"></div>
+    </form>
+    <hr>
+    <h1>Worker's stuff</h1>
+    <input type="number" id="nr1">
+    <input type="number" id="nr2">
+    <button id="add-btn">Add numbers</button><br>
+    <button id="terminate-worker">Terminate the worker</button>
+</body>
+</html>
