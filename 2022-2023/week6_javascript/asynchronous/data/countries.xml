@@ -1,0 +1,32 @@
+<!-- The tags in XML are not defined in any XML standard -->
+
+<!-- Visit https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction for a brief introduction to XML -->
+<europe>
+    <country code="FRA">
+        <name>France</name>
+        <capital>Paris</capital>
+        <density>119</density>
+        <area>
+            543940
+            <silly>silly stuff</silly>
+        </area>
+    </country>
+    <country code="GER">
+        <name>Germany</name>
+        <capital>Berlin</capital>
+        <density>240</density>
+        <area>357386</area>
+    </country>
+    <country code="RUS">
+        <name>Russia</name>
+        <capital>Moscow</capital>
+        <density>9</density>
+        <area>17125191</area>
+    </country>
+    <country code="UKR">
+        <name>Ukraine</name>
+        <capital>Kyiv</capital>
+        <density>75</density>
+        <area>603628</area>
+    </country>
+</europe>
