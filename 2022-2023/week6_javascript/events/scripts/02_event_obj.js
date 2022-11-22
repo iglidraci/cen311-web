@@ -23,6 +23,7 @@ btn.addEventListener('mousedown', event => {
 const p = document.getElementById('click-p');
 
 p.addEventListener('mousedown', console.log);
+document.body.addEventListener('mousedown', console.log);
 
 /**
  * At any point, an event handler can stop the event propagation

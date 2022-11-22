@@ -5,8 +5,8 @@ const canvas = document.getElementById('canvas');
 window.addEventListener('click', event => {
     const point = document.createElement('div');
     point.className = 'dot';
-    point.style.top = event.clientX + "px";
-    point.style.left = event.clientY + "px";
+    point.style.left = event.clientX + "px";
+    point.style.top = event.clientY + "px";
     document.body.appendChild(point);
 })
 
@@ -27,7 +27,6 @@ bar.addEventListener("mousedown", event => {
 
 function moved(event) {
     if (event.buttons == 0) {
-        // number of buttons currently held down
         window.removeEventListener("mousemove", moved);
     } else {
         let dist = event.clientX - lastX;
