@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="scripts/01_fetch.js" defer></script>
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-bottom: 10px">
+        <h1>IT Bookstore API</h1>
+        
+        <div class="container">
+            <p>
+                <button type="button" class="btn btn-secondary" id="btn-load">New Releases Books</button>
+            </p>
+            <div>
+                <p>
+                    <input type="text" class="form-control col-md-6" id="search-input">
+                    <small id="emailHelp" class="form-text text-muted">Search books by title, author, ISBN or keywords</small>
+                </p>
+                <p>
+                    <button id="search-btn" class="btn btn-success">Search</button>
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" style="display: none;" id="spinner">
+        </div>
+    </div>
+    <main class="container" id="result-container">
+        <!-- <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> -->
+    </main>
+</body>
+</html>
