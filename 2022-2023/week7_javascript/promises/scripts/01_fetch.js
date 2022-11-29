@@ -47,7 +47,8 @@ const getNewReleases = function() {
     // [GET] https://api.itbook.store/1.0/new
     container.innerHTML = ''; // make sure to delete the current books from document
     startSpinner();
-    fetchJSON(`${BASE_URL}/new`)
+    fetch(`${BASE_URL}/new`)
+        .then(response => response.json())
         .then(data => {
             for(const book of data.books)
                 appendBook(book);
