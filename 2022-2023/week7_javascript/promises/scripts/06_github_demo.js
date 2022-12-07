@@ -22,40 +22,21 @@ class HttpError extends Error {
     }
 }
 
-const fetchGithubUser = (username) => {
+const fetchGithubUser = async (username) => {
     const GITHUB_URL = 'https://api.github.com/users'
-    return fetchJSON(`${GITHUB_URL}/${username}`)
-        .then(user => {
-            const html = `
-            <div class="card" style="width: 18rem;">
-                <img src="${user.avatar_url}" class="card-img-top" alt="${username}">
-                <div class="card-body">
-                    <h5 class="card-title">${user.name ?? username}</h5>
-                    <p class="card-text">
-                        Created at: ${new Date(user.created_at).toDateString()}
-                    </p>
-                    <p>
-                        Followers: <span class="badge bg-secondary">${user.followers}</span>, 
-                        Following: <span class="badge bg-secondary">${user.following}</span>
-                    </p>
-                    <div class="card-body">
-                        <a id="followers-btn" data-username="${username}" class="card-link">Followers</a>
-                        <a id="following-btn" data-username="${username}" class="card-link">Following</a>
-                    </div>
-                </div>
-            </div>`;
-            userDiv.innerHTML = html;
-            followersDiv.innerHTML = '';
-            paginationDiv.innerHTML = '';
-            console.log(user);
-        })
-        .catch(error => {
-            if (error instanceof HttpError){
-                console.log("no user found");
-            } else {
-                throw error;
-            }
-        })
+    try {
+        const user = await fetchJSON(`${GITHUB_URL}/${username}`);
+        appendUser(user, username);
+        followersDiv.innerHTML = '';
+        paginationDiv.innerHTML = '';
+        console.log(user);
+    } catch (error) {
+        if (error instanceof HttpError) {
+            console.log("no user found");
+        } else {
+            throw error;
+        }
+    }
 }
 
 fetchBtn.addEventListener('click', () => {
@@ -82,6 +63,28 @@ userDiv.addEventListener('click', (event) => {
         }
     }
 })
+
+function appendUser(user, username) {
+    const html = `
+            <div class="card" style="width: 18rem;">
+                <img src="${user.avatar_url}" class="card-img-top" alt="${username}">
+                <div class="card-body">
+                    <h5 class="card-title">${user.name ?? username}</h5>
+                    <p class="card-text">
+                        Created at: ${new Date(user.created_at).toDateString()}
+                    </p>
+                    <p>
+                        Followers: <span class="badge bg-secondary">${user.followers}</span>, 
+                        Following: <span class="badge bg-secondary">${user.following}</span>
+                    </p>
+                    <div class="card-body">
+                        <a id="followers-btn" data-username="${username}" class="card-link">Followers</a>
+                        <a id="following-btn" data-username="${username}" class="card-link">Following</a>
+                    </div>
+                </div>
+            </div>`;
+    userDiv.innerHTML = html;
+}
 
 async function fetchFollowers(username, page=1, type='followers') {
     const URL = `https://api.github.com/users/${username}/${type}?per_page=${PAGE_SIZE}&page=${page}`;

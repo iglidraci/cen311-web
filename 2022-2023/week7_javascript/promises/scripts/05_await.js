@@ -1,7 +1,7 @@
 /**
  * Special syntax called "async/await"
- * The async and await keywords enable asynchronous, promise-based 
- * behavior to be written in a cleaner style, avoiding the need to explicitly 
+ * The async and await keywords enable asynchronous, promise-based
+ * behavior to be written in a cleaner style, avoiding the need to explicitly
  * configure promise chains.
  */
 
@@ -41,6 +41,19 @@ bar();
  * "await" allows us to use "thenable" objects
  * if you have a method "then", it's enough for "await" to work
  */
+
+ const thenable = {
+   then: (resolve, _) => {
+     resolve('hello from a thenable object');
+   }
+ }
+
+ const foo = async () => {
+   const res = await thenable;
+   console.log(res);
+ }
+
+ foo();
 
 /**
  * Error handling

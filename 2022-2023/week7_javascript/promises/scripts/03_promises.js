@@ -14,16 +14,35 @@ const makePromise = () => {
     const promise = new Promise((resolve, reject) => {
         logDiv.insertAdjacentHTML('beforeend', `<p>Promise ${currentCount} constructor</p>`);
         setTimeout(() => {
-            resolve(currentCount);
+            if (Math.random() > 0.5)
+                resolve(currentCount);
+            else
+                reject(currentCount);
         }, Math.random() * 2000 + 1000);
     });
     promise.then(value => {
-        logDiv.insertAdjacentHTML('beforeend', `<p>Promise ${value} fulfilled</p>`);
-    }).catch(reason => {
-        console.log(`Promise rejected because: ${reason}`);
+        logDiv.insertAdjacentHTML('beforeend', `<p style="color: green">Promise ${value} fulfilled</p>`);
+    }).catch(value => {
+        logDiv.insertAdjacentHTML('beforeend', `<p style="color: darkred">Promise ${value} rejected</p>`);
     });
 };
 
 btn.addEventListener('click', makePromise);
 
+// promisify the click event in button
 
+HTMLButtonElement.prototype.waitClick = function() {
+    return new Promise((resolve, _) => {
+        this.addEventListener('click', (event) => {
+            resolve(event);
+        })
+    })
+}
+
+const onBtnClicked = async () => {
+    await btn.waitClick();
+    console.log('button clicked');
+    onBtnClicked();
+}
+
+onBtnClicked();

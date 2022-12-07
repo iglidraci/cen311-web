@@ -1,6 +1,6 @@
 /**
  * MDN reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
- * The Promise object represents the eventual completion (or failure) of 
+ * The Promise object represents the eventual completion (or failure) of
  * an asynchronous operation and its resulting value.
  * A Promise is in one of these states:
  * 1) pending: initial state, neither fulfilled nor rejected.
@@ -19,6 +19,7 @@
         }
     }, 1000);
  })
+
 
  evenNumberPromise.then(console.log).catch(console.error);
 
@@ -65,5 +66,3 @@ const aThenable = {
 };
 
 Promise.resolve(aThenable).then(console.log); // will resolve the promise immediately
-
-  
