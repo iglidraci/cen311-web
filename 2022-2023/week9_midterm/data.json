@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Albania",
+        "code": "AL",
+        "area": "28,748 km²",
+        "population": 2870166
+    },
+    {
+        "name": "Greece",
+        "code": "GR",
+        "area": "131,957 km²",
+        "population": 10299603
+    }, 
+    {
+        "name": "Turkey",
+        "code": "TR",
+        "area": "783,562 km²",
+        "population": 86544717 
+    }
+]

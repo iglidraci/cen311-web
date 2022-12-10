@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+        #container {
+            padding: 20px;
+            text-align: center;
+        }
+        #inputDiv {
+            border: 5px dotted;
+            margin-bottom: 20px;
+        }
+        #outputDiv {
+            border: 5px double red;
+            margin-bottom: 20px;
+        }
+        #innerDiv {
+            border: 5px solid yellow;
+            margin: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #inputDiv {
+                border: 5px double;
+                border-radius: 20px;
+            }
+            #outputDiv {
+                border: 5px dotted blue;
+                border-radius: 20px;
+            }
+            #innerDiv {
+                border: 5px solid green;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inputDiv">
+            <p style="text-align: center;">
+                Enter a number:
+                <input type="number" id="input">
+                <button id="btn">Calculate</button>
+            </p>
+        </div>
+        <div id="outputDiv">
+            <p>Result</p>
+            <div id="innerDiv">
+                <p id="result">No input yet</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

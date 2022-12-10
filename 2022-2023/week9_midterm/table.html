@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    table, td, th {
+        border: 1px solid;
+        padding: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table td:hover {
+        background-color: rgb(191, 222, 127);
+    }
+
+    form *:hover {
+        background-color: aqua;
+    }
+    form {
+        display: flex; flex-direction: column; align-items: center;
+    }
+</style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                HTML and CSS
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Foo</li>
+                    <li>Bar</li>
+                    <li>Baz</li>
+                </ul>
+            </td>
+            <td rowspan="3">
+                <form>
+                    <label for="email">Username:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                    <label for="textarea">Biography:</label>
+                    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea> <label
+                        for="languages">Favorite animal:</label>
+                    <select name="languages" id="languages">
+                        <option>Cat</option>
+                        <option>Dog</option>
+                    </select>
+                </form>               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <ol type="I">
+                    <li>
+                        Group A
+                        <ol type="i">
+                            <li>Argentina</li>
+                            <li>Poland</li>
+                        </ol>
+                    </li>
+                    <li> Group B
+                        <ol type="i">
+                            <li>Portugal</li>
+                            <li>Korea</li>
+                        </ol>
+                    </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="" alt="image is missing">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
