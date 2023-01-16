@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^home$ home.html [NC]
+# RewriteRule ^shop/biscuits/chocolate$ shop.php?item1=biscuits&item2=chocolate [QSA]
+RewriteRule ^shop/([A-Za-z0-9]+)/(chocolate|ice-cream) shop.php?item1=$1&item2=$2 [QSA]
