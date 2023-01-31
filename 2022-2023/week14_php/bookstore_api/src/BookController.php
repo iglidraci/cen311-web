@@ -5,7 +5,8 @@ class BookController {
 
     }
 
-    public function handleRequest($method, $id) {
+    public function handleRequest($method, $id): void
+    {
         if ($id) {
             // process a single resource
             // /books/1 [GET, PATCH, DELETE]
@@ -18,7 +19,8 @@ class BookController {
         }
     }
 
-    private function handleSingleResource($method, $id) {
+    private function handleSingleResource($method, $id): void
+    {
         $book = $this->manager->get($id);
         if(!$book) {
             http_response_code(404);
@@ -30,7 +32,8 @@ class BookController {
                 echo json_encode($book);
                 break;
             case 'PATCH':
-                $data = json_decode(file_get_contents("php://input"), true) ?? [];
+                $json = file_get_contents("php://input");
+                $data = json_decode($json, true) ?? [];
                 $errors = $this->cleanData($data, false);
                 if(count($errors) > 0){
                     http_response_code(422); // 422 Unprocessable Entity
@@ -54,13 +57,15 @@ class BookController {
         }
     }
 
-    private function handleCollection($method) {
+    private function handleCollection($method): void
+    {
         switch($method) {
             case 'GET':
                 echo json_encode($this->manager->fetchAll());
                 break;
             case 'POST':
-                $request_data = json_decode(file_get_contents("php://input"), true) ?? array();
+                $json = file_get_contents("php://input");
+                $request_data = json_decode($json, true) ?? array();
                 $errors = $this->cleanData($request_data);
                 if(count($errors) > 0) {
                     http_response_code(422);

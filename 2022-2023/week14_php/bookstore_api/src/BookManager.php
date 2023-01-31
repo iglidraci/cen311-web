@@ -29,11 +29,11 @@ class BookManager {
         $stmt = $this->connection->prepare($sql);
         $stmt->bindParam(':id', $id);
         $stmt->execute();
-        $book = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $book;
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function update($current, $new) {
+    public function update($current, $new): int
+    {
         $sql = "update book set isbn = :isbn, title = :title, author_id = :author_id,
                 stock = :stock, original_price = :original_price, current_price = :current_price,
                 published_date = :published_date where id = :id";
@@ -57,7 +57,8 @@ class BookManager {
         return $stmt->rowCount();
     }
 
-    public function delete($id) {
+    public function delete($id): int
+    {
         $sql = "update book set deleted=1 where id = :id;";
         $stmt = $this->connection->prepare($sql);
         $stmt->bindParam(':id', $id);
