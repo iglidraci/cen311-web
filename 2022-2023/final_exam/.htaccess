@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^fact-([0-9]+) index.php?nr=$1&type=factorial
+RewriteRule ^([0-9]+)/([0-9]+) index.php?nr1=$1&nr2=$2&type=div
+RewriteRule ^primes/([0-9]+) index.php?nr=$1&type=primes
